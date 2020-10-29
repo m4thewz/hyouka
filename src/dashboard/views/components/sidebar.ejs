@@ -8,14 +8,14 @@
 
   <% guilds.forEach((guild) => { %>
       <% if (guild.icon) { %>
-      <div class="text-center guild-items">
+      <div class="text-center guild-items mt-2">
         <a href="/dashboard/guilds/<%=guild.id%>">
-          <img class="guild-image user-avatar" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" alt="<%=guild.name%>">
+          <img class="guild-image user-avatar" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" alt="<%=guild.name%>" title="<%=guild.name%>">
         </a>
       </div>
       <% } else { %>
         <div class="ellipsis guild-blue guild-itens">
-            <a href="https://hyouka-web.glitch.me/dashboard/guilds/<%=guild.id%>" class="guild-acr pt-3" style="font-size: 12px;" ><%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %></a>
+            <a href="https://hyouka-web.glitch.me/dashboard/guilds/<%=guild.id%>" class="guild-acr pt-3" style="font-size: 12px;" title="<%=guild.name%>" ><%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %></a>
         </div>
       <%}%>
   <%});%>
