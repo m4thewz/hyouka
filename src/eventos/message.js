@@ -1,4 +1,3 @@
-const firebase = require('firebase').database()
 
 const mongoose = require('mongoose')
 const {MessageEmbed} = require('discord.js')
