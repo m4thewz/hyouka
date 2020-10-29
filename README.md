@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.glitch.com/3e9304e0-23b6-4d34-8ca4-92f7ba536183%2Fhyoukakk.jpg?v=1602441076647" width="300">
+  <img src="https://cdn.glitch.com/3e9304e0-23b6-4d34-8ca4-92f7ba536183%2Fhyoukakk.jpg?v=1602441076647" width="300" style="border-radius: 50%;"">
 </div>
 <h1 align="center">Hyouka</h1>
 
