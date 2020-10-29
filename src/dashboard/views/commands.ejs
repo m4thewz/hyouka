@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <%- include('./components/header.ejs') %>
+      <link rel="stylesheet" href="/css/comandos.css">
+    </head>
+  <body>
+    <%- include ('./components/navbar.ejs') %>
+    
+    
+    <div class="container">
+      <h3 class="display-3">Comandos</h3>
+      <p class="lead">Descruba todos os comandos do Hyouka!</p>
+        <div class="row">
+            <div class="col-md-3 mb-2">
+              <h1>Categorias</h1>
+              <br>
+              <div id="list-modules" class="list-group menu">
+                  <button class="bcomando bcomando-active" id="command">Todos os comandos</button>
+                  <% categorias.forEach((categoria) => {%> <!-- forEach nas categorias -->
+                    <button class="bcomando" id="<%=categoria%>"><%=categoria%></button><!-- o id é pra usar o attr e mostrar os comandos da categoria -->
+                  <%})%>
+              </div>
+            </div>
+            
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-12 pr-0 mb-2">
+                  <h1>Comandos</h1>
+                    <div class="form-group">
+                        <input autocomplete="off" class="form-control form-control-lg cmd-input" id="search-input" type="text" placeholder="Pesquisar">
+                    </div>
+                </div>
+                <div class="col-12 pr-0">
+                        <div id="categorias">
+                          <%comandos.forEach((comando) => {%> <!--Da um forEach nos comandos -->
+                            <div class="card mb-2  border-secondary rounded command <%=comando.category%>"><!-- Tem que colocar o nome da categoria pra o evento de mostra categoria -->
+                              <div class="<%=comando.name%>Cmd card-header" data-toggle="collapse" data-target="#<%=comando.name%>" aria-expanded="true" aria-controls="<%=comando.name%>" style="background-color: #212529;padding: 20px;"> <!-- Esses arias são do aside do bootstrap, faz de outro jeito pra não ficar igual o meu -->
+                                <%=comando.name%> 
+                                <span class="float-right">
+                                  <i class="icon">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                  </i>
+                                </span>
+                              </div>
+                          
+                              <div id="<%=comando.name%>" class="collapse">
+                                <div class="card-body" style="background-color: #212529;">
+                                  <p><%=comando.description%></p>
+                                  <%if(comando.aliases) {%>
+                                  <span class="bold">Sinônimos: </span><span><%=comando.aliases.join(', ')%></span>
+                                  <%}%>
+                                  
+                                  <br>
+                                  <span class="bold">Modo de uso: </span> <span><%=comando.usage%></span>
+                                  <br>
+                                  <%if(comando.example) {%>
+                                   <span class="bold">Exemplo: </span> <span><%=comando.example%></span>
+                                  <%}%>
+                                </div>
+                              </div>
+                            </div>
+                          <%})%>
+                          
+                          <p id="notfound" style="display: none;">Comando nao encontrado</p>
+                        
+                        </div>
+                </div>
+              </div>             
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
