@@ -13,7 +13,7 @@ module.exports = {
                   embed: {
                       enabled: false,
                       title:  '',
-                      description: '{user.name} entrou no servidor',
+                      description: '',
                       footer:{
                         enabled: false,
                         footerImage: '{user.avatar}',

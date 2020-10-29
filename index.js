@@ -15,19 +15,7 @@ const client = new Client({
 require("./src/utils/functions")(client);
 
 client.config = require("./config");
-const firebaseConfig = {
-    apiKey: "AIzaSyCumrBHmSfX5aKPbnPcIKMIjbpALwNoaL8",
-    authDomain: "hyouka-bot.firebaseapp.com",
-    databaseURL: "https://hyouka-bot.firebaseio.com",
-    projectId: "hyouka-bot",
-    storageBucket: "hyouka-bot.appspot.com",
-    messagingSenderId: "641716428744",
-    appId: "1:641716428744:web:ed8d0642a435777f4caafd",
-    measurementId: "G-GY6VKG5KD7"
-  }; 
 
-  
-firebase.initializeApp(firebaseConfig)
 const eventFiles = readdirSync(join(__dirname, "src/eventos")).filter((file) => file.endsWith(".js")); // pega a pasta eventos e filtra os arquivos que tem .js
     
   for (const file of eventFiles) { //for para cada arquivo
