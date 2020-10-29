@@ -1,0 +1,26 @@
+<div class="sidebar float-left">
+ <div class="text-center">
+    <a href="/dashboard">
+    <img class="round user-avatar" src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png?size=512" width="52" alt="<%=user.username%>">
+  </a>
+  </div>
+  <hr class="guild-seperator">
+
+  <% guilds.forEach((guild) => { %>
+      <% if (guild.icon) { %>
+      <div class="text-center guild-items">
+        <a href="/dashboard/guilds/<%=guild.id%>">
+          <img class="guild-image user-avatar" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" alt="<%=guild.name%>" data-toggle='tooltip', data-placement='right', title="<%=guild.name%>">
+        </a>
+      </div>
+      <% } else { %>
+        <div class="ellipsis guild-blue guild-itens">
+            <a href="https://hyouka-web.glitch.me/dashboard/guilds/<%=guild.id%>" class="guild-acr pt-3" style="font-size: 12px;" data-toggle='tooltip', data-placement='right', title="<%=guild.name%>"><%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %></a>
+        </div>
+      <%}%>
+  <%});%>
+  <a href="/invite">
+      
+  </a>
+  
+</div>

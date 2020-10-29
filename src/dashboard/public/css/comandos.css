@@ -1,0 +1,45 @@
+
+.menu {
+  background-color: #212529;
+  padding: 25px;
+  border-radius: 5px;
+}
+ .bcomando{
+  text-align: left;
+  color: #dee2e6;
+  cursor: pointer;
+  font-weight: 600;
+  border: 0;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+}
+.bcomando:hover{
+  color: var(--primary)
+}
+.bcomando-active {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+}
+.bcomando-active:hover{
+  color: #fff;
+}
+.cmd-input{
+  border: 0;
+  padding: 15px;
+  font-weight: 600;
+}
+.card-header{
+  transition: .2s;
+  font-weight: 700;
+}
+svg{
+  transition: all .3s ease;
+}
+.icon-arrow svg{
+  transform: rotate(180deg);
+}
+
+.background-header{
+  background-color: #4c4e52 !important;
+}
