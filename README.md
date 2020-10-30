@@ -23,3 +23,7 @@
   <img src="https://media.discordapp.net/attachments/754154558631968778/771538584528224286/unknown.png?width=905&height=533" ">
 </div>
 
+Caso você se separe com o erro **Invalid Ouath Redirect** em seu dashboard_callback_uri coloque seu url inteiro exemplo:
+```
+DASHBOARD_CALLBACK_URL=https://hyouka-web.glitch.me/auth/discord/redirect/
+```
