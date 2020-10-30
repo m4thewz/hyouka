@@ -20,6 +20,6 @@
 
 <div align="center">
   <h6>Na sua aplicação crie um redirect</h6>
-  <img src="https://media.discordapp.net/attachments/754154558631968778/771538584528224286/unknown.png?width=905&height=533" width="300">
+  <img src="https://media.discordapp.net/attachments/754154558631968778/771538584528224286/unknown.png?width=905&height=533" ">
 </div>
 
