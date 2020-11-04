@@ -28,8 +28,8 @@ module.exports = {
               let categoriaEmoji = categoria.replace('ã', 'a').replace('ç', 'c')
               let emoji = emojis.emojis.cache.find(e => e.name == `${categoriaEmoji}Emoji`) //Aqui busco por um emoji com o nome da categoria + emoji, ex: InfoEmoji
               //<:${emoji.name}:${emoji.id}>
-              emoji = `<${emoji.animated ? 'a:' : ''}${emoji.name}:${emoji.id}>`
-              embed.addField(`${emoji}${categoria}[${comandos.length}]`, `Exemplo de comando: **${comandos[Math.floor(Math.random() * comandos.length)].name}**`)
+              emoji = `<${emoji.animated ? 'a:' : ':'}${emoji.name}:${emoji.id}>`
+              embed.addField(`${emoji} ${categoria}[${comandos.length}]`, `Exemplo de comando: **${comandos[Math.floor(Math.random() * comandos.length)].name}**`)
             })
         
             let msg = await message.channel.send(embed)
