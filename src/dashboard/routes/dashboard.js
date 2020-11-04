@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/guilds/:guildId', async (req, res) => {
+  console.log(req.user)
     const guild = client.guilds.cache.get(req.params.guildId);
     if(!guild) return res.redirect(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8&guild_id=${req.params.guildId}`)
     if(!guild.members.cache.get(req.user.id).hasPermission("MANAGE_GUILD")) {
