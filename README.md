@@ -13,7 +13,7 @@
   DASHBOARD_CLIENT_ID=Client Id
   DASHBOARD_CLIENT_SECRET=Client Secret do seu bot(Em general information)
   DASHBOARD_CALLBACK_URL=/auth/discord/redirect
-  MONGOURI=Url do seu cluster no mongo
+  MONGOURI=Url do seu cluster no mongo, exemplo: Matheus:superpocoyo@hyouka.bskkr.mongodb.net/Hyouka
 
 ```
 >Coloque isso em seu arquivo .env na raiz do projeto
@@ -23,7 +23,7 @@
   <img src="https://media.discordapp.net/attachments/754154558631968778/771538584528224286/unknown.png?width=905&height=533" ">
 </div>
 
-Caso você se separe com o erro **Invalid Ouath Redirect** em seu dashboard_callback_uri coloque seu url inteiro exemplo:
+Caso você se separe com o erro **Invalid Ouath Redirect** em seu `dashboard_callback_uri` coloque seu url inteiro, exemplo:
 ```
 DASHBOARD_CALLBACK_URL=https://hyouka-web.glitch.me/auth/discord/redirect/
 ```
