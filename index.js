@@ -1,5 +1,3 @@
-require('./glitch.js') //serviço de auto ping
-
 const mongoose = require('mongoose')
 const { Client, Collection, MessageEmbed } = require("discord.js");
 
@@ -23,10 +21,10 @@ const eventFiles = readdirSync(join(__dirname, "src/eventos")).filter((file) => 
     let eventName = file.split(".")[0]; // pega o nome dele
     client.on(eventName, (...args) => event.run(client, ...args))// agora seta o evento
   }
-  client.login(process.env.BOT_TOKEN);
+   client.login(process.env.BOT_TOKEN);
 module.exports = client//exporta o cliente(para a dashboard)
 
 //vc tambem pode usar um exports.run na dashboard ai você faria isso require('./src/dashboard/server.js')(client) mas ja tinha feito assim ai fiquei com preguiça
 
-require('./src/dashboard/server.js') //pra iniciar a dashboard
+ require('./src/dashboard/server.js') //pra iniciar a dashboard
 //❯
