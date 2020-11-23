@@ -26,18 +26,11 @@ module.exports.run = async (client, message) => {
         ownerName: message.guild.owner.user.username,
         ownerId: message.guild.owner.id,
           
-      }).then(async () => {
-        let msg = await message.channel.send('Desculpe estava registrando seu servidor no meu banco de dados, tente novamente')
-        msg.delete({timeout: 3000})
-      
       })
     }
     else if(!db.user) {//ou se o user não estiver registrado ele registra
       const newProfile = await client.createUser({
         id: message.author.id
-      }).then(async () => {
-        let msg = await message.channel.send('Desculpe estava registrando você no meu banco de dados, tente novamente')
-        msg.delete({timeout: 3000})
       })
     }
     

@@ -1,4 +1,3 @@
-
 require('./strategies/discord')
 const express = require('express')
 const app = express()
